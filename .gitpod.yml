@@ -1,0 +1,3 @@
+tasks:
+  - init: docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=mydb -p 3306:3306 -d mysql:latest
+    command: sleep infinity
