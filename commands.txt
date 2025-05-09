@@ -30,4 +30,43 @@ If you want to completely remove the MySQL container, use:
 
 -> docker rm mysql
 
+
+To check the MySQL database and tables in Gitpod, you can use the MySQL CLI client. Follow these steps:
+
+1. Access the MySQL Container
+Run the following command in the Gitpod terminal to access the MySQL container:
+
+-> docker exec -it mysql mysql -u root -p
+
+When prompted, enter the password root (as set in your .gitpod.yml file).
+
+2. List Databases
+Once inside the MySQL CLI, list all databases using:
+
+-> SHOW DATABASES;
+
+You should see the mydb database (or the database name you specified in your .gitpod.yml file).
+
+3. Use a Database
+Switch to the desired database (e.g., mydb) using:
+
+-> USE mydb;
+
+4. List Tables
+To see all tables in the selected database, run:
+
+-> SHOW TABLES;
+
+5. Query a Table
+To view the contents of a specific table, use:
+
+-> SELECT * FROM table_name;
+
+Replace table_name with the name of the table you want to query.
+
+6. Exit MySQL
+To exit the MySQL CLI, type:
+
+EXIT;
+
 Note: If you remove the container, you will lose all data stored in it unless you have configured a persistent volume.
