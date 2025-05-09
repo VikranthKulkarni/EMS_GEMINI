@@ -1,0 +1,33 @@
+To activate and deactivate MySQL in your Gitpod workspace, you can use the following commands:
+
+Activate MySQL
+If MySQL is not running, you can start it using Docker:
+
+-> docker start mysql
+
+This will start the MySQL container that was created during the initialization process.
+
+Deactivate MySQL
+To stop the MySQL container, use the following command:
+
+-> docker stop mysql
+
+This will stop the MySQL container without deleting it.
+
+Check MySQL Status
+To check if the MySQL container is running, use:
+
+-> docker ps
+
+If the container is running, you will see an entry for mysql. If it is not running, you can use:
+
+-> docker ps -a
+
+This will list all containers, including stopped ones.
+
+Remove MySQL Container (Optional)
+If you want to completely remove the MySQL container, use:
+
+-> docker rm mysql
+
+Note: If you remove the container, you will lose all data stored in it unless you have configured a persistent volume.
