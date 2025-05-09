@@ -1,8 +1,0 @@
-image:
-  file: .gitpod.Dockerfile
-
-tasks:
-  - init: |
-      sudo service mysql start
-    command: |
-      echo "MySQL should be running"
