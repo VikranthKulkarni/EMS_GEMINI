@@ -4,6 +4,5 @@ image:
 tasks:
   - init: |
       sudo service mysql start
-      echo "MySQL started"
     command: |
-      mysql -uroot -p123456 -e "SHOW DATABASES;"
+      echo "MySQL should be running"
